@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import Gif, { Component } from 'react';
 
-class Giflist extends Component {
+class GifList extends Component {
     render {
         return (
-        <img src="https://giphy.com/gifs/stupid-homer-simpson-monkey-BBkKEBJkmFbTG" alt="homer"/>
+        <Gif />
         );
     };
 }
 
-export default Giflist;
+export default GifList;

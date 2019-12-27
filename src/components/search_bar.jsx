@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class SearchBar extends Component {
     render {
         return (
-        <img src="https://giphy.com/gifs/stupid-homer-simpson-monkey-BBkKEBJkmFbTG" alt="homer"/>
+        <input type="text" className="form-control form-search"/>
         );
-    };
+    }
 }
 
 export default SearchBar;
