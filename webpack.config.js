@@ -11,7 +11,7 @@ module.exports = {
       template: '!!html-loader!templates/index.html'
     })
   ],
-  devtool: 'sourcemap',
+  devtool: 'eval-cheap-module-source-map',
   mode: "development",
   module: {
     rules: [
