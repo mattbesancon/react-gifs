@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import giphy from 'giphy-api';
+import { GiphyFetch } from '@giphy/js-fetch-api';
 
 import SearchBar from './search_bar';
 import Gif from './gif';
 import GifList from './gif_list';
 
-const GIPHY_API_KEY = '1KMPHCBIOe3hOjJwCJQX49sRc6cM0oIm';
+const REACT_APP_GIPHY_KEY = 'S84EFr0ZvMN1J9Up6R6j5ftMUL6QfHBZ';
+
+const giphy = new GiphyFetch(REACT_APP_GIPHY_KEY);
 
 class App extends Component {
   constructor(props) {
@@ -18,16 +20,16 @@ class App extends Component {
   }
 
   search = (query) => {
-    giphy({ apiKey: GIPHY_API_KEY, https: true })
-      .search({
-        q: query,
-        rating: 'g',
-        limit: 10
-      }, (err, result) => {
-        this.setState({
-          gifs: result.data
-        });
+    giphy.search({
+      apiKey: REACT_APP_GIPHY_KEY,
+      q: query,
+      rating: 'g',
+      limit: 10
+    }, (err, result) => {
+      this.setState({
+        gifs: result.data
       });
+    });
   }
 
   selectGif = (id) => {
