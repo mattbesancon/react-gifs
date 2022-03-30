@@ -1,5 +1,6 @@
 {
   "license": "UNLICENSED",
+  "homepage": "https://matttbesancon.github.io/react-gifs",
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.17.8",
@@ -16,7 +17,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
-    "gh-pages": "^2.0.1",
+    "gh-pages": "^2.2.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.12.0",
@@ -32,8 +33,10 @@
     "webpack-dev-server": "^4.7.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "webpack-dev-server --mode development",
     "lint": "eslint './src/**/*.js*'",
-    "deploy": "webpack -p && gh-pages -d dist"
+    "build": "webpack --config webpack.config.js"
   }
 }
