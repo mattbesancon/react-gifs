@@ -1,6 +1,6 @@
 {
   "license": "UNLICENSED",
-  "homepage": "https://matttbesancon.github.io/react-gifs",
+  "homepage": "https://mattbesancon.github.io/react-gifs",
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.17.8",
