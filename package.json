@@ -1,5 +1,6 @@
 {
   "license": "UNLICENSED",
+  "homepage": "https://mattbesancon.github.io/react-gifs",
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.17.8",
@@ -34,6 +35,6 @@
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "lint": "eslint './src/**/*.js*'",
-    "deploy": "webpack -p && gh-pages -d dist"
+    "deploy": "webpack --mode production"
   }
 }
