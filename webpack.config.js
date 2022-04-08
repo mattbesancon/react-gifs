@@ -11,6 +11,10 @@ module.exports = {
       template: '!!html-loader!templates/index.html'
     })
   ],
+  performance: {
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  },
   devtool: 'inline-source-map',
   mode: "development",
   module: {
