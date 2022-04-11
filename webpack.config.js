@@ -33,6 +33,10 @@ module.exports = {
         test: /\.html$/,
         loader: 'html-loader'
       },
+      {
+        test: /\.(eot|gif|otf|png|svg|ttf|woff)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader'
+      },
     ]
   },
   resolve: {
